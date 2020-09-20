@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  appStore
+
+  Created by myslab on 2020/09/16.
+  Copyright © 2020 mys. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "App Store";
+"CFBundleName" = "App Store";

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  appStore
+
+  Created by myslab on 2020/09/16.
+  Copyright © 2020 mys. All rights reserved.
+*/
+
+"title" = "검색";
+"place_holder" = "게임, 앱, 스토리 등";
+"recent" = "최근 검색어";
+"releasenote" = "새로운 기능";
+"releasenote_record" = "버전 기록";
+"version" = "버전";
+"more" = "더 보기";
+"preview" = "미리 보기";
+"infomation"="정보";
