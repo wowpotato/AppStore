@@ -83,6 +83,8 @@ final class SearchViewModel {
     
     //MARK:- 검색시도
     func searchKeyword(_ text: String) {
+        self.softwares.removeAll()
+        self.updateClosure?()
         self.saveKeyword(text)
         
         network.fetchList(text) { [weak self] (result: Result<SoftwareWrapper,APIError>) in
