@@ -34,9 +34,8 @@ final class SearchViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
         self.navigationController?.navigationBar.standardAppearance = appearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        self.navigationController?.navigationBar.compactAppearance = appearance
         self.navigationItem.largeTitleDisplayMode = .automatic
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "cancel".localized()
     }
     
     //MARK:- 검색 컨트롤러 설정

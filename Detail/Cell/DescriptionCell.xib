@@ -18,20 +18,36 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYl-s2-YwK">
                         <rect key="frame" x="20" y="10" width="374" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-dR-lGt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-dR-lGt">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="일상에서 더 쉽게, 더 자주 만나는 금융혁신 제1금융권 은행 카카오뱅크 새롭게 디자인된 은행">
+                                    <fragment>
+                                        <string key="content">일상에서 더 쉽게, 더 자주 만나는 금융혁신 제1금융권 은행 카카오뱅크 새롭게 디자인된 은행
+</string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="새롭게 디자인된 은행">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bV-MR-STt">
-                                <rect key="frame" x="331" y="62" width="43" height="30"/>
-                                <state key="normal" title="더 보기"/>
+                                <rect key="frame" x="314" y="53" width="60" height="29"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="wOq-H9-21K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <state key="normal" title="더 보기">
+                                    <color key="titleShadowColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="more"/>
                                 </userDefinedRuntimeAttributes>
@@ -41,7 +57,7 @@
                         <constraints>
                             <constraint firstItem="GLp-dR-lGt" firstAttribute="leading" secondItem="FYl-s2-YwK" secondAttribute="leading" id="7Ch-F7-qht"/>
                             <constraint firstAttribute="bottom" secondItem="GLp-dR-lGt" secondAttribute="bottom" constant="20" id="ErP-nO-QmM"/>
-                            <constraint firstAttribute="bottom" secondItem="7bV-MR-STt" secondAttribute="bottom" constant="8" id="JQ0-Ql-524"/>
+                            <constraint firstAttribute="bottom" secondItem="7bV-MR-STt" secondAttribute="bottom" constant="18" id="JQ0-Ql-524"/>
                             <constraint firstAttribute="trailing" secondItem="GLp-dR-lGt" secondAttribute="trailing" id="Xsg-tu-fYb"/>
                             <constraint firstAttribute="height" constant="100" id="Yba-52-Yrr"/>
                             <constraint firstItem="GLp-dR-lGt" firstAttribute="top" secondItem="FYl-s2-YwK" secondAttribute="top" id="eNf-rq-9t6"/>
@@ -94,7 +110,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="GLp-dR-lGt" id="dl8-ib-fbC"/>
-                <outlet property="sellerNameLabel" destination="WO4-hv-9Bz" id="ixI-aW-TdY"/>
+                <outlet property="sellerNameLabel" destination="AP8-mj-g0v" id="LH7-91-KQl"/>
             </connections>
             <point key="canvasLocation" x="139" y="125"/>
         </tableViewCell>

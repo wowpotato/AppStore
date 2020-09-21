@@ -10,12 +10,12 @@ import UIKit
 
 extension UILabel {
 
-    func highlight(searchedText: String?..., color: UIColor = .red) {
+    func highlight(searchedText: String?..., color: UIColor = UIColor(named: "FindFocusColor") ?? .red) {
         guard let txtLabel = self.text else { return }
 
         let attributeTxt = NSMutableAttributedString(string: txtLabel)
         let range = NSRange(location: 0, length: txtLabel.count)
-        attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemGray2, range: range)
+        attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemGray, range: range)
         self.attributedText = attributeTxt
         
         searchedText.forEach {
