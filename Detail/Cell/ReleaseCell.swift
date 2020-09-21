@@ -22,7 +22,7 @@ class ReleaseCell: UITableViewCell {
     func configure(_ software: Software?) {
         guard let software = software else { return }
         versionLabel.text = "\("version".localized()) \(software.version ?? "")"
-        updateLabel.text = software.releaseDate
+        updateLabel.text = software.currentVersionReleaseDate
         releaseLabel.text = software.releaseNotes
     }
 }

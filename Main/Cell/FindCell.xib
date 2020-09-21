@@ -29,6 +29,7 @@
                         <color key="highlightedColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 <constraints>
                     <constraint firstItem="bcf-vr-aME" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3yH-6H-8Ln"/>
                     <constraint firstItem="bcf-vr-aME" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QBB-sS-j5b"/>

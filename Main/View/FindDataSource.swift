@@ -46,6 +46,6 @@ extension FindDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.didSelectRecent(viewModel.recents[indexPath.row])
+        viewModel.didSelectRecent(viewModel.findRecents[indexPath.row])
     }
 }
