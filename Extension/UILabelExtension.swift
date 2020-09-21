@@ -15,7 +15,7 @@ extension UILabel {
 
         let attributeTxt = NSMutableAttributedString(string: txtLabel)
         let range = NSRange(location: 0, length: txtLabel.count)
-        attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), range: range)
+        attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemGray2, range: range)
         self.attributedText = attributeTxt
         
         searchedText.forEach {

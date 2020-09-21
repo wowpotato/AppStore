@@ -9,7 +9,8 @@
 import UIKit
 
 typealias VoidClosure = (() -> Void)
-typealias DataSourcelosure = ((SearchType, String) -> Void)
+typealias DataSourceClosure = ((SearchType, String) -> Void)
+typealias AlertClosure = ((String) -> Void)
 
 enum SearchType {
     case recent, find, result
@@ -18,7 +19,8 @@ enum SearchType {
 final class SearchViewModel {
      
     var updateClosure: VoidClosure?
-    var dataSoureClosure: DataSourcelosure?
+    var dataSoureClosure: DataSourceClosure?
+    var alertClosure: AlertClosure?
     
     lazy var recentDataSource = {
         return RecentDataSource(self)
@@ -89,12 +91,15 @@ final class SearchViewModel {
             case .success(let model):
                 guard let results = model.results else { return }
                 self.softwares.append(contentsOf: results)
-                DispatchQueue.main.async {
-                    self.updateClosure?()
-                }
+                self.updateClosure?()
 //                print(model)
             case .failure(let error):
-                print(error)
+                switch error {
+                case .data:
+                    self.alertClosure?("network_error".localized())
+                case .decodingJSON:
+                    self.alertClosure?("encoding_error".localized())
+                }
             }
         }
     }
@@ -116,3 +121,11 @@ final class SearchViewModel {
     }
     
 }
+
+#if DEBUG
+extension SearchViewModel {
+    public func exposeFindkeyword(_ text: String) -> [Recent] {
+        return self.findKeyword(text)
+    }
+}
+#endif

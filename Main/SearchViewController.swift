@@ -68,7 +68,9 @@ final class SearchViewController: UIViewController {
         /// reload tableview
         viewModel.updateClosure = { [weak self] () in
             guard let `self` = self else { return }
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         
         /// reload tableview datasourece
@@ -77,6 +79,16 @@ final class SearchViewController: UIViewController {
             self.navigationItem.searchController?.searchBar.text = query
             self.navigationItem.searchController?.isActive = true
             self.setDataSource(type)
+        }
+        
+        /// Show alert
+        viewModel.alertClosure = { [weak self] (message) in
+            guard let `self` = self else { return }
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "ok".localized(), style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

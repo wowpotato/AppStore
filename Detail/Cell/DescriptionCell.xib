@@ -23,9 +23,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="일상에서 더 쉽게, 더 자주 만나는 금융혁신 제1금융권 은행 카카오뱅크 새롭게 디자인된 은행">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>

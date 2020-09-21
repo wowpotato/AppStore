@@ -34,7 +34,12 @@ extension RouterProtocol where Self: UIViewController {
     static func pushViewController() -> Self {
         print(" ✈️ pushViewController : \(String(describing:self))")
         let vc = getViewController()
-        
+        guard let nvc = self.navigationController else { return vc }
+        nvc.pushViewController(vc, animated: true)
+        return vc
+    }
+    
+    static var navigationController: UINavigationController? {
         let keyWindow = UIApplication.shared.connectedScenes
         .lazy
         .filter { $0.activationState == .foregroundActive }
@@ -43,9 +48,7 @@ extension RouterProtocol where Self: UIViewController {
         .windows
         .first { $0.isKeyWindow }
         
-        guard let nvc = keyWindow?.rootViewController as? UINavigationController else { return vc }
-        nvc.pushViewController(vc, animated: true)
-        return vc
+        guard let nvc = keyWindow?.rootViewController as? UINavigationController else { return nil }
+        return nvc
     }
-    
 }
