@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreviewCell: UITableViewCell {
+final class PreviewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     

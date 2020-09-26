@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReleaseCell: UITableViewCell {
+final class ReleaseCell: UITableViewCell {
 
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var updateLabel: UILabel!

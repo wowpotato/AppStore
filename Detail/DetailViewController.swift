@@ -40,11 +40,17 @@ final class DetailViewController: UIViewController, RouterProtocol {
     static var storyboardName: String = "Main"
     @IBOutlet weak var tableView: UITableView!
     
+    var lastContentOffset: CGFloat = 0
     var software: Software?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
+    override func loadView() {
+        super.loadView()
+        
+        self.navigationController?.navigationBar.isTranslucent = true
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     override func viewDidLoad() {

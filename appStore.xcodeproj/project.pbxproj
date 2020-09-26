@@ -49,7 +49,6 @@
 		C08A7F7E251503580064E745 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F7D251503580064E745 /* UITableViewExtension.swift */; };
 		C08A7F8325158B8F0064E745 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F8225158B8F0064E745 /* Recent.swift */; };
 		C08A7F8E2515B4F10064E745 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F8D2515B4F00064E745 /* SearchViewController.swift */; };
-		C08A7F942515C26B0064E745 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F932515C26B0064E745 /* Find.swift */; };
 		C08A7F982515C3E10064E745 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F972515C3E10064E745 /* SearchViewModel.swift */; };
 		C08A7F9A2515E0FF0064E745 /* RecentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F992515E0FF0064E745 /* RecentDataSource.swift */; };
 		C08A7F9C2515E2BB0064E745 /* FindDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F9B2515E2BB0064E745 /* FindDataSource.swift */; };
@@ -134,7 +133,6 @@
 		C08A7F7D251503580064E745 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C08A7F8225158B8F0064E745 /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
 		C08A7F8D2515B4F00064E745 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		C08A7F932515C26B0064E745 /* Find.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find.swift; sourceTree = "<group>"; };
 		C08A7F972515C3E10064E745 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		C08A7F992515E0FF0064E745 /* RecentDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDataSource.swift; sourceTree = "<group>"; };
 		C08A7F9B2515E2BB0064E745 /* FindDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindDataSource.swift; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 				C08A7FB82516E3CA0064E745 /* Software.swift */,
 				C08A7F712513B1BD0064E745 /* Track.swift */,
 				C08A7F8225158B8F0064E745 /* Recent.swift */,
-				C08A7F932515C26B0064E745 /* Find.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,7 +601,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C08A7FAD25163B3A0064E745 /* UIImageViewExtension.swift in Sources */,
-				C08A7F942515C26B0064E745 /* Find.swift in Sources */,
 				C039A80225174A9300F79AA2 /* DescriptionCell.swift in Sources */,
 				C08A7FB025163DDF0064E745 /* ResultCell.swift in Sources */,
 				C039A7F025171DB700F79AA2 /* DetailTitleCell.swift in Sources */,

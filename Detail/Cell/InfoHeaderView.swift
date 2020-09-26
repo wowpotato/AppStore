@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoHeaderView: UITableViewHeaderFooterView {
+final class InfoHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()

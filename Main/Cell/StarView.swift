@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarView: UIView {
+final class StarView: UIView {
     weak var view: UIView!
     
     @IBOutlet var offImageViews: [UIImageView]!

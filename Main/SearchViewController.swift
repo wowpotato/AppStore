@@ -13,11 +13,6 @@ final class SearchViewController: UIViewController {
     
     let viewModel = SearchViewModel()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +22,11 @@ final class SearchViewController: UIViewController {
         updateTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateNavigationController()
+    }
+    
     //MARK:- 네비게이션 설정
     private func updateNavigationController() {
         self.navigationController?.view.backgroundColor = .systemBackground
@@ -34,7 +34,9 @@ final class SearchViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
         self.navigationController?.navigationBar.standardAppearance = appearance
+        
         self.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "cancel".localized()
     }
     
@@ -44,8 +46,7 @@ final class SearchViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "place_holder".localized()
         searchController.searchBar.delegate = self
-        
-        self.navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.hidesNavigationBarDuringPresentation = true
         self.navigationItem.searchController = searchController
     }
     

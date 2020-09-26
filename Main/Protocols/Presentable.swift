@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Presentable: NSObject , UITableViewDelegate, UITableViewDataSource {
+protocol Presentable: AnyObject , UITableViewDelegate, UITableViewDataSource {
     var viewModel: SearchViewModel { get set }
     
     init(_ viewModel: SearchViewModel)

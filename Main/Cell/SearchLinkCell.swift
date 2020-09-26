@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchLinkCell: UITableViewCell {
+final class SearchLinkCell: UITableViewCell {
 
     @IBOutlet weak var linkLabel: UILabel!
     

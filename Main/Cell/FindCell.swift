@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindCell: UITableViewCell {
+final class FindCell: UITableViewCell {
 
     @IBOutlet weak var findLabel: UILabel!
     

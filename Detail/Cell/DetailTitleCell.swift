@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailTitleCell: UITableViewCell {
+final class DetailTitleCell: UITableViewCell {
 
     @IBOutlet weak var artistImageView: UIImageView!
     @IBOutlet weak var trackLabel: UILabel!

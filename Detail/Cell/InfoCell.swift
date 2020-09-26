@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoCell: UITableViewCell {
+final class InfoCell: UITableViewCell {
 
     @IBOutlet weak var infoTitleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
