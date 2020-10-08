@@ -66,24 +66,21 @@ final class SearchViewController: UIViewController {
     //MARK:- 클로저 연결
     private func bindModelClosure() {
         /// reload tableview
-        viewModel.updateClosure = { [weak self] () in
-            guard let `self` = self else { return }
+        viewModel.updateClosure = { [unowned self] () in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
         
         /// reload tableview datasourece
-        viewModel.dataSoureClosure = { [weak self] (type, query) in
-            guard let `self` = self else { return }
+        viewModel.dataSoureClosure = { [unowned self] (type, query) in
             self.navigationItem.searchController?.searchBar.text = query
             self.navigationItem.searchController?.isActive = true
             self.setDataSource(type)
         }
         
         /// Show alert
-        viewModel.alertClosure = { [weak self] (message) in
-            guard let `self` = self else { return }
+        viewModel.alertClosure = { [unowned self] (message) in
             DispatchQueue.main.async {
                 let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "ok".localized(), style: .cancel, handler: nil))

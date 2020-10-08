@@ -13,7 +13,7 @@ let UISCREEN_WIDTH = UIScreen.main.bounds.width
 let UISCREEN_HEIGHT = UIScreen.main.bounds.height
 
 /// nibCache
-var cacheViewNibs = NSCache<NSString, UIView>()
+let cacheViewNibs = NSCache<NSString, UIView>()
 
 extension UIView {
 

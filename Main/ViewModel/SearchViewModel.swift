@@ -94,7 +94,6 @@ final class SearchViewModel {
                 guard let results = model.results else { return }
                 self.softwares.append(contentsOf: results)
                 self.updateClosure?()
-//                print(model)
             case .failure(let error):
                 switch error {
                 case .data:

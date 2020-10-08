@@ -8,7 +8,20 @@
 
 import UIKit
 
-let imageCache = NSCache<NSString, UIImage>()
+public final class ImageCache {
+    static let shared: ImageCache = ImageCache()
+    private let imageCache = NSCache<NSString, UIImage>()
+    
+    subscript(_ key: NSString) -> UIImage? {
+        return imageCache.object(forKey: key)
+    }
+    
+    func set(_ key: NSString, _ image: UIImage) {
+        imageCache.setObject(image, forKey: key)
+    }
+}
+
+//let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     func loadImage(_ urlString : String?) {
@@ -17,7 +30,7 @@ extension UIImageView {
         guard let url = URL(string: urlString) else { return }
         
         // check cached image
-        if let cachedImage = imageCache.object(forKey: urlString as NSString)  {
+        if let cachedImage = ImageCache.shared[urlString as NSString]  {
             self.animate()
             self.image = cachedImage
             return
@@ -32,7 +45,7 @@ extension UIImageView {
             
             DispatchQueue.main.async {
                 if let image = UIImage(data: data) {
-                    imageCache.setObject(image, forKey: urlString as NSString)
+                    ImageCache.shared.set(urlString as NSString, image)
                     self.animate()
                     self.image = image
                 }
