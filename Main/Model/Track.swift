@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct TrackWrapper: Decodable {
-    let resultCount: Int?
-    let results: [Track]?
-}
-
 struct Track: Decodable {
     let wrapperType: String?
     let kind: String?

@@ -87,7 +87,7 @@ final class SearchViewModel {
         self.updateClosure?()
         self.saveKeyword(text)
         
-        network.fetchList(text) { [weak self] (result: Result<SoftwareWrapper,APIError>) in
+        network.fetchList(text) { [weak self] (result: Result<ModelWrapper<Software>,APIError>) in
             guard let `self` = self else { return }
             switch result {
             case .success(let model):

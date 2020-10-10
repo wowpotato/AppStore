@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct SoftwareWrapper: Decodable {
-    let resultCount: Int?
-    let results: [Software]?
-}
-
 struct Software: Decodable {
     let isGameCenterEnabled: Bool?
     let features: [String]?

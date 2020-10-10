@@ -31,6 +31,8 @@
 		C0604FFD2516F38E009DD91E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0604FFC2516F38E009DD91E /* ArrayExtension.swift */; };
 		C060500325171411009DD91E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C060500225171411009DD91E /* DetailViewController.swift */; };
 		C0605008251717B1009DD91E /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0605007251717B1009DD91E /* RouterProtocol.swift */; };
+		C06AA3BD2531EEBC00970AF8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06AA3BC2531EEBC00970AF8 /* NavigationController.swift */; };
+		C06AA3D32531F53000970AF8 /* ModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06AA3D22531F53000970AF8 /* ModelWrapper.swift */; };
 		C08A7F14251241690064E745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F13251241690064E745 /* AppDelegate.swift */; };
 		C08A7F16251241690064E745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A7F15251241690064E745 /* SceneDelegate.swift */; };
 		C08A7F1D2512416A0064E745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08A7F1C2512416A0064E745 /* Assets.xcassets */; };
@@ -113,6 +115,8 @@
 		C0604FFC2516F38E009DD91E /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		C060500225171411009DD91E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C0605007251717B1009DD91E /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		C06AA3BC2531EEBC00970AF8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		C06AA3D22531F53000970AF8 /* ModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWrapper.swift; sourceTree = "<group>"; };
 		C08A7F10251241690064E745 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08A7F13251241690064E745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08A7F15251241690064E745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		C039A7F225173C2200F79AA2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C06AA3BC2531EEBC00970AF8 /* NavigationController.swift */,
 				C08A7F8D2515B4F00064E745 /* SearchViewController.swift */,
 				C08A7FA5251611160064E745 /* View */,
 				C08A7F8A2515AD7F0064E745 /* ViewModel */,
@@ -373,6 +378,7 @@
 		C08A7F702513B15C0064E745 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C06AA3D22531F53000970AF8 /* ModelWrapper.swift */,
 				C08A7FB82516E3CA0064E745 /* Software.swift */,
 				C08A7F712513B1BD0064E745 /* Track.swift */,
 				C08A7F8225158B8F0064E745 /* Recent.swift */,
@@ -607,6 +613,7 @@
 				C039A8092517682D00F79AA2 /* InfoCell.swift in Sources */,
 				C08A7F9A2515E0FF0064E745 /* RecentDataSource.swift in Sources */,
 				C08A7F9F2515E4580064E745 /* FindCell.swift in Sources */,
+				C06AA3D32531F53000970AF8 /* ModelWrapper.swift in Sources */,
 				C08A7F8E2515B4F10064E745 /* SearchViewController.swift in Sources */,
 				C08A7FB92516E3CA0064E745 /* Software.swift in Sources */,
 				C08A7F982515C3E10064E745 /* SearchViewModel.swift in Sources */,
@@ -616,6 +623,7 @@
 				C08F5BED251793A30015EA28 /* StarView.swift in Sources */,
 				C08A7F7E251503580064E745 /* UITableViewExtension.swift in Sources */,
 				C039A7FA2517460F00F79AA2 /* PreviewCell.swift in Sources */,
+				C06AA3BD2531EEBC00970AF8 /* NavigationController.swift in Sources */,
 				C08A7F6D2513AF490064E745 /* Service.swift in Sources */,
 				C08A7FA22515F9DE0064E745 /* UserDefaultsExtension.swift in Sources */,
 				C039A7F62517407C00F79AA2 /* ReleaseCell.swift in Sources */,

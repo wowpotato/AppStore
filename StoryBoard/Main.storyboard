@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="z1h-li-8fc">
             <objects>
-                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="DZ1-li-pXF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DZ1-li-pXF" customClass="NavigationController" customModule="AppStore" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="o6j-I0-edY">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
