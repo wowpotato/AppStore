@@ -21,9 +21,19 @@ public final class ImageCache {
     }
 }
 
-//let imageCache = NSCache<NSString, UIImage>()
+// MARK: - Associated Object
+private var taskIdentifierKey: Void?
 
 extension UIImageView {
+    private var task: URLSessionTask? {
+        get {
+            objc_getAssociatedObject(self,  &taskIdentifierKey) as? URLSessionTask
+        }
+        set {
+            objc_setAssociatedObject(self,  &taskIdentifierKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     func loadImage(_ urlString : String?) {
         self.image = nil
         guard let urlString = urlString else { return }
@@ -36,7 +46,8 @@ extension UIImageView {
             return
         }
         
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+        self.task?.cancel()
+        self.task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             guard let data = data else { return }
             if let error = error {
                 print(error)
@@ -50,7 +61,8 @@ extension UIImageView {
                     self.image = image
                 }
             }
-        }).resume()
+        })
+        self.task?.resume()
     }
     
     func animate() {
