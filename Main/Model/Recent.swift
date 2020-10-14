@@ -9,11 +9,11 @@
 import Foundation
 
 struct Recent: Codable {
+    static let KEY = "recents"
     let query: String
     
     static func fetchRecent() -> [Recent] {
-        guard let data = UserDefaults.standard.value(forKey:"recents") as? Data else { return [] }
-        guard let recent = try? PropertyListDecoder().decode(Array<Recent>.self, from: data) else { return [] }
+        guard let recent = try? UserDefaults.standard.get(objectType: Array<Recent>.self, forKey: Recent.KEY) else { return [] }
         return recent
     }
 }

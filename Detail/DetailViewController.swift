@@ -40,7 +40,6 @@ final class DetailViewController: UIViewController, RouterProtocol {
     static var storyboardName: String = "Main"
     @IBOutlet weak var tableView: UITableView!
     
-    var lastContentOffset: CGFloat = 0
     var software: Software?
     
     override func loadView() {

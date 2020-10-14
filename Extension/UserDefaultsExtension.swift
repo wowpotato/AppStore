@@ -20,7 +20,7 @@ public extension UserDefaults {
     /// - Throws: UserDefaults Error
     func set<T: Codable>(object: T, forKey: String) throws {
 
-        let jsonData = try JSONEncoder().encode(object)
+        let jsonData = try PropertyListEncoder().encode(object)
 
         set(jsonData, forKey: forKey)
     }
@@ -37,7 +37,7 @@ public extension UserDefaults {
             return nil
         }
 
-        return try JSONDecoder().decode(objectType, from: result)
+        return try PropertyListDecoder().decode(objectType, from: result)
     }
 }
 

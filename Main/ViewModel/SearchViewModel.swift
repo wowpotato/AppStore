@@ -112,8 +112,7 @@ final class SearchViewModel {
             self.recents.remove(at: index)
         }
         recents.insert(recent, at: 0)
-        guard let encode = try? PropertyListEncoder().encode(self.recents) else { return }
-        UserDefaults.standard.set(encode, forKey:"recents")
+        try? UserDefaults.standard.set(object: self.recents, forKey: Recent.KEY)
     }
     
     //MARK:- 로컬 검색어 찾기
