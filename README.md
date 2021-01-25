@@ -1,5 +1,5 @@
 # AppStore
-Test 20200920
+AppStore
 
 ## Github API Request
 https://github.com/wowpotato/AppStore.git
